@@ -76,7 +76,10 @@ Expected output: this.customers[id] or false
 
 ## Known Bugs
 
-*Too many to count. This is not a working app!
+* Too many to count. This is not a working site!
+* UI logic doesn't work, isn't connected.
+* No cost is calculted.
+* No ability to add toppings or choose size.
 
 _Note: This website is under construction. It currently has functioning business logic for adding customers to orders, and adding pizzas to customers.
 
