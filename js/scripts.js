@@ -54,11 +54,21 @@ function Pizza(size, toppings, cost) {
   this.cost = 0;
 }
 
-// Pizza.prototype.addTopping = function () {
+Pizza.prototype.addTopping = function () {
+  if();
+}
 
-// }
+Pizza.prototype.chooseSize = function () {
+  if();
+}
+Pizza.prototype.addToCost = function () {
+  if();
+}
 
 // UI Logic
 
-let newOrder = new Order ();
 
+let newOrder1 = new Order ();
+
+let newCustomer1 = new Customer("george"); 
+let newPizza1 = new Pizza ("medium", ["pepperoni", "olives"]);
