@@ -32,11 +32,17 @@ Test: "It should create Pizza"
 Code: function Pizza(size, toppings) {
 Expected Output: newPizza1 {size: undefined, toppings: undefined}
 
-Test: "It should 
-Code: 
-Expected Output: 
+Test: "It should return a Pizza object with two properties for toppings and size"
+Code: let newPizza1 = new Pizza(["pepperoni", "olives"], "medium");
+Expected Output: newPizza1 {size: "Medium", toppings: ["pepperoni", "olives"]}
 
-Test: 
+Test: "It should create Customer."
+Code:
+Expexted output:
+
+Test: "It should create Order."
+Code:
+Expected output:
 
 ## Setup/Installation Requirements
 
