@@ -36,16 +36,8 @@ Test: "It should return a Pizza object with two properties for toppings and size
 Code: let newPizza1 = new Pizza(["pepperoni", "olives"], "medium");
 Expected Output: newPizza1 {size: "Medium", toppings: ["pepperoni", "olives"]}
 
-Test: "It should addTopping to Pizza."
-Code: if();
-Expected output: 
-
-Test: "It should chooseSize for Pizza."
-Code: if();
-Expected output:
-
 Test: It should addToCost for Pizza."
-Code: if();
+Code: 
 Expected output:
 
 # _Describe: Customer()_
@@ -76,8 +68,6 @@ Test: "It should find a customer."
 Code: Order.prototype.findCustomer
 Expected output: this.customers[id] or false
 
-
-
 ## Setup/Installation Requirements
 
 * Clone this repository to your desktop
@@ -86,7 +76,9 @@ Expected output: this.customers[id] or false
 
 ## Known Bugs
 
-*
+*Too many to count. This is not a working app!
+
+_Note: This website is under construction. It currently has functioning business logic for adding customers to orders, and adding pizzas to customers.
 
 
 ## License
