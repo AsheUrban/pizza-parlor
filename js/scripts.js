@@ -66,7 +66,7 @@ function showOrder(customerId) {
   const newOrder = newOrder.findCustomer(customerId);
   $("#show-contact").show();
   $(".first-name").html(customer.firstName);
-  $(".cost").html(pizza.cost)
+
 }
 
 $(document).ready(function() {

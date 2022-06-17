@@ -36,6 +36,18 @@ Test: "It should return a Pizza object with two properties for toppings and size
 Code: let newPizza1 = new Pizza(["pepperoni", "olives"], "medium");
 Expected Output: newPizza1 {size: "Medium", toppings: ["pepperoni", "olives"]}
 
+Test: "It should addTopping to Pizza."
+Code: if();
+Expected output: 
+
+Test: "It should chooseSize for Pizza."
+Code: if();
+Expected output:
+
+Test: It should addToCost for Pizza."
+Code: if();
+Expected output:
+
 # _Describe: Customer()_
 
 Test: "It should create Customer."
@@ -63,6 +75,8 @@ Expected output: newCustomer.id;
 Test: "It should find a customer."
 Code: Order.prototype.findCustomer
 Expected output: this.customers[id] or false
+
+
 
 ## Setup/Installation Requirements
 
