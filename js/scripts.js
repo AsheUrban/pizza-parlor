@@ -15,6 +15,13 @@ Order.prototype.assignId = function() {
   return this.currentId;
 };
 
+Order.prototype.findCustomer = function(id) {
+  if (this.customers[id] != undefined) {
+    return this.customers[id];
+  }
+  return false;
+}
+
 // Business Logic for Customer
 
 function Customer (firstName, pizza) {
@@ -39,12 +46,8 @@ function Pizza(size, toppings) {
   this.toppings = toppings;
 }
 
-Pizza.prototype.AddToppings = function() {
-
-}
-
 // UI Logic
 
 let newOrder1 = new Order ();
-let newCustomer1 = new Customer()
-let newPizza1 = new Pizza();
+let newCustomer1 = new Customer("george", pizza) // can't figure out how to get pizza here
+let newPizza1 = new Pizza ("medium", ["pepperoni", "olives"]);
