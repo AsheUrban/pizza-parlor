@@ -25,6 +25,7 @@ Order.prototype.findCustomer = function(id) {
 
 function Customer (firstName, currentIdPizza) {
   this.firstName = firstName;
+  this.pizzas = {};
   this.currentIdPizza = 0;
 }
 
@@ -53,21 +54,44 @@ function Pizza(size, toppings, cost) {
   this.cost = 0;
 }
 
-Pizza.prototype.addTopping = function () {
-  if();
-}
-
-Pizza.prototype.chooseSize = function () {
-  if();
-}
-Pizza.prototype.addToCost = function () {
-  if();
-}
+// Pizza.prototype.addCost = function () {
+//   return "$" + this.X + this.X
+// }
 
 // UI Logic
 
-let newOrder1 = new Order ();
-let newCustomer1 = new Customer("george"); 
-let newPizza1 = new Pizza ("medium", ["pepperoni", "olives"]);
-newOrder1.addCustomer(newCustomer1);
-newCustomer1.addPizza(newPizza1);
+let newOrder = new Order();
+
+function showOrder(customerId) {
+  const newOrder = newOrder.findCustomer(customerId);
+  $("#show-contact").show();
+  $(".first-name").html(customer.firstName);
+  $(".cost").html(pizza.cost)
+}
+
+$(document).ready(function() {
+  attachContactListeners();
+  $("form#new-corder").submit(function(event) {
+    event.preventDefault();
+    const inputtedFirstName = $("input#new-first-name").val();
+
+    $("input#new-first-name").val("");
+   
+    let newCustomer = new Customer(inputtedFirstName, currentIdPizza)
+    newOrder.addCustomer(newCustomer);
+    newCustomer.addPizza(newPizza);
+  });
+});
+
+
+
+// Pizza.prototype.addTopping = function () {
+//   if();
+// }
+
+// Pizza.prototype.chooseSize = function () {
+//   if();
+// }
+
+
+
