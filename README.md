@@ -37,12 +37,12 @@ Code: let newPizza1 = new Pizza(["pepperoni", "olives"], "medium");
 Expected Output: newPizza1 {size: "Medium", toppings: ["pepperoni", "olives"]}
 
 Test: "It should create Customer."
-Code:
-Expexted output:
+Code: function Customer (firstName, pizza) {
+Expexted output: newCustomer(firstName: "name", pizza{});
 
 Test: "It should create Order."
-Code:
-Expected output:
+Code: function Pizza (size, toppings) {
+Expected output: newPizza(size: "size", toppings:["topping1", "topping2"])
 
 ## Setup/Installation Requirements
 
