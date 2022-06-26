@@ -36,10 +36,14 @@ let newPizza = new Pizza ();
 $(document).ready(function() {
   $("form#new-order").submit(function(event) {
     event.preventDefault();
+    const size = $("#size").val();
+    // I know that checkboxes should work like radios, but I'm not sure how to set this up using an array.
+
+    // if(size=true )
 
 
-      $("#show-order").html(newPizza.addCost(this.totalCost));
-      console.log();
+    $("#show-order").html(newPizza.addCost(this.totalCost));
+    console.log();
      
       
     });
