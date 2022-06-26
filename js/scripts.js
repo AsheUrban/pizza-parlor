@@ -1,6 +1,6 @@
 // Business Logic for Order
 
-function Order (customers, currentIdCustomer) {
+function Order (customers) {
   this.customers = {};
   this.currentIdCustomer = 0;
 }
@@ -21,9 +21,10 @@ Order.prototype.findCustomer = function(id) {
   }
   return false;
 }
+
 // Business Logic for Customer
 
-function Customer (firstName, currentIdPizza) {
+function Customer (firstName) {
   this.firstName = firstName;
   this.pizzas = {};
   this.currentIdPizza = 0;
@@ -48,48 +49,46 @@ Customer.prototype.findPizza = function(id) {
 
 // Business Logic for Pizza
 
-function Pizza(size, toppings, cost) {
+function Pizza(size, toppings) {
   this.size = size;
   this.toppings = toppings;
-  this.cost = 0;
 }
 
-// Pizza.prototype.addCost = function () {
-//   return "$" + this.X + this.X
+// Pizza.prototype.addCost = function() {
+//   if (this.size === "small")
+//     return ...
 // }
 
 // UI Logic
 
-let newOrder = new Order();
-
-function showOrder(customerId) {
-  const newOrder = newOrder.findCustomer(customerId);
-  $("#show-contact").show();
-  $(".first-name").html(customer.firstName);
-
-}
-
 $(document).ready(function() {
-  attachContactListeners();
-  $("form#new-corder").submit(function(event) {
+  $("form#new-order").submit(function(event) {
     event.preventDefault();
-    const inputtedFirstName = $("input#new-first-name").val();
+    const size = $("#size").val();
+    // let toppings = $("input:checkbox[id=pepperoni,olives]:checked").val();
 
-    $("input#new-first-name").val("");
-   
-    let newCustomer = new Customer(inputtedFirstName, currentIdPizza)
-    newOrder.addCustomer(newCustomer);
-    newCustomer.addPizza(newPizza);
+
+    if(size === "small") {
+      $("#show-order").text("$10");
+    } else if(size === "small" && toppings === "olives") {
+        $("#show-order").text("$11");
+    } else if(size === "small" && toppings === "olives" && toppings === "pepperoni") {
+          $("#show-order").text("$12");
+    } else if (size === "medium") {
+    $("#show-order").text("$12");
+    } else if (size === "medium" && toppings === "olives") {
+      $("#show-order").text("$13");
+    } else if (size === "medium" && toppings === "olives" && toppings === "pepperoni") {
+      $("#show-order").text("$14");
+    } else if (size === "large") {
+    $("#show-order").text("$14");
+    } else if (size === "large" && toppings === "olives") {
+      $("#show-order").text("$15");
+    } else if (size === "large" && toppings === "olives" && toppings === "pepperoni") {
+      $("#show-order").text("$16");
+    }
+
+    
+    
   });
 });
-
-// Pizza.prototype.addTopping = function () {
-//   if();
-// }
-
-// Pizza.prototype.chooseSize = function () {
-//   if();
-// }
-
-
-
