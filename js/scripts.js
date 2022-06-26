@@ -52,43 +52,43 @@ Customer.prototype.findPizza = function(id) {
 function Pizza(size, toppings) {
   this.size = size;
   this.toppings = toppings;
+  this.cost = cost;
 }
 
-// Pizza.prototype.addCost = function() {
-//   if (this.size === "small")
-//     return ...
-// }
+let newPizza = new Pizza();
 
+Pizza.prototype.addCost = function() {
+  if(this.size === "small") {
+    return "$10"
+  } else if(this.size === "Small" && this.toppings === "olives") {
+    return this.cost = "$11" 
+  } else if(this.size === "Small" && this.toppings === "olives" && this.toppings === "pepperoni") {
+    return this.cost = "$12"
+  } else if (this.size === "Medium") {
+    return this.cost = "$12"
+  } else if (this.size === "Medium" && this.toppings === "olives") {
+    return this.cost = "$13"
+  } else if (this.size === "Medium" && this.toppings === "olives" && this.toppings === "pepperoni") {
+    return this.cost = "$14"
+  } else if (this.size === "Large") {
+    return this.cost = "$14"
+  } else if (this.size === "Large" && this.toppings === "olives") {
+    return this.cost = "$15"
+  } else if (this.size === "Large" && this.toppings === "olives" && this.toppings === "pepperoni") {
+    return this.cost = "$16"
+}
+}
 // UI Logic
 
 $(document).ready(function() {
   $("form#new-order").submit(function(event) {
     event.preventDefault();
+    newPizza.addCost();
     const size = $("#size").val();
-    // let toppings = $("input:checkbox[id=pepperoni,olives]:checked").val();
-
-
-    if(size === "small") {
-      $("#show-order").text("$10");
-    } else if(size === "small" && toppings === "olives") {
-        $("#show-order").text("$11");
-    } else if(size === "small" && toppings === "olives" && toppings === "pepperoni") {
-          $("#show-order").text("$12");
-    } else if (size === "medium") {
-    $("#show-order").text("$12");
-    } else if (size === "medium" && toppings === "olives") {
-      $("#show-order").text("$13");
-    } else if (size === "medium" && toppings === "olives" && toppings === "pepperoni") {
-      $("#show-order").text("$14");
-    } else if (size === "large") {
-    $("#show-order").text("$14");
-    } else if (size === "large" && toppings === "olives") {
-      $("#show-order").text("$15");
-    } else if (size === "large" && toppings === "olives" && toppings === "pepperoni") {
-      $("#show-order").text("$16");
-    }
 
     
+
     
+   
+    });
   });
-});
