@@ -89,6 +89,8 @@ $(document).ready(function() {
 
     // gather input values from fields
     const size = $("input:radio[name=size]:checked").val();
+
+    //need to use size.
    
     let selectedToppings = [];
     $("input:checkbox[name=toppings]:checked").each(function() {
