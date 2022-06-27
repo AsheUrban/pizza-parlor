@@ -1,3 +1,52 @@
+// Business Logic for Order
+
+function Order (customers) {
+  this.customers = {};
+  this.currentIdCustomer = 0;
+}
+
+Order.prototype.addCustomer = function(customer) {
+  customer.id = this.assignIdCustomer();
+  this.customers[customer.id] = customer;
+};
+
+Order.prototype.assignIdCustomer = function() {
+  this.currentIdCustomer += 1;
+  return this.currentIdCustomer;
+};
+
+Order.prototype.findCustomer = function(id) {
+  if (this.customers[id] != undefined) {
+    return this.customers[id];
+  }
+  return false;
+}
+
+// Business Logic for Customer
+
+function Customer (firstName) {
+  this.firstName = firstName;
+  this.pizzas = {};
+  this.currentIdPizza = 0;
+}
+
+Customer.prototype.addPizza = function(pizza) {
+  pizza.id = this.assignIdPizza();
+  this.pizzas[pizza.id] = pizza;
+};
+
+Customer.prototype.assignIdPizza = function() {
+  this.currentIdPizza += 1;
+  return this.currentIdPizza;
+};
+
+Customer.prototype.findPizza = function(id) {
+  if (this.pizzas[id] != undefined) {
+    return this.pizzas[id];
+  }
+  return false;
+}
+
 // Business Logic for Pizza
 
 
@@ -16,7 +65,7 @@ Pizza.prototype.addCost = function() {
     this.totalCost = 12;
   } else {
     this.totalCost = 14;
-    console.log(size);
+    
   }
 
   if(this.toppings = "topping1") {
@@ -24,7 +73,6 @@ Pizza.prototype.addCost = function() {
   }
   if(this.toppings = "topping2") {
     this.totalCost += 1;
-    console.log(toppings);
   }
 
   return this.totalCost
