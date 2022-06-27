@@ -36,18 +36,19 @@ let newPizza = new Pizza ();
 $(document).ready(function() {
   $("form#new-order").submit(function(event) {
     event.preventDefault();
-  
-    const size =  $("input:radio[name=size]:checked").val();
-    let toppings = [];
-    $("input:checkbox[name=toppings]:checked").each(function() {
-      toppings.push($(this).val());
-    })
-    //not sure if this jives with my business logic...
-    console.log(toppings);
-    console.log(size);
 
-    $("#show-order").html(newPizza.addCost(this.totalCost));
-    console.log();
+    // gather input values from fields
+    const size = $("input:radio[name=size]:checked").val();
+   
+    let selectedToppings = [];
+    $("input:checkbox[name=toppings]:checked").each(function(element) {
+      selectedToppings.push($(element).val());
+    }); // how does this connect to the toppings in our business logic?
+
+    // get .addCost
+   
+    $("#show-order").html(newPizza.addCost(size, selectedToppings));
+    console.log(newPizza);
     });
 
     function logReset() {
