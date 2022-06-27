@@ -60,11 +60,11 @@ function Pizza(size, toppings) {
 
 Pizza.prototype.addCost = function() {
   if(this.size = "Small") {
-    this.totalCost = 10;
+    this.totalCost += 10;
   } else if (this.size = "Medium") {
-    this.totalCost = 12;
+    this.totalCost += 12;
   } else {
-    this.totalCost = 14;
+    this.totalCost += 14;
     
   }
 
