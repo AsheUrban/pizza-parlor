@@ -16,14 +16,14 @@ Pizza.prototype.addCost = function() {
   }
   
 
-  if(this.toppings === "olives") {
+  if(this.toppings === "topping1") {
     this.totalCost += 1;
   }
 
-  if(this.toppings === "pepperoni") {
+  if(this.toppings === "topping2") {
     this.totalCost += 1;
   }
-  console.log();
+
   return this.totalCost
  
 }
@@ -36,16 +36,18 @@ let newPizza = new Pizza ();
 $(document).ready(function() {
   $("form#new-order").submit(function(event) {
     event.preventDefault();
-    const size = $("#size").val();
-    // I know that checkboxes should work like radios, but I'm not sure how to set this up using an array.
-
-    // if(size=true )
-
+  
+    const size =  $("input:radio[name=size]:checked").val();
+    let toppings = [];
+    $("input:checkbox[name=toppings]:checked").each(function() {
+      toppings.push($(this).val());
+    })
+    //not sure if this jives with my business logic...
+    console.log(toppings);
+    console.log(size);
 
     $("#show-order").html(newPizza.addCost(this.totalCost));
     console.log();
-     
-      
     });
 
     function logReset() {

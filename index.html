@@ -24,21 +24,34 @@
       </div>
   
       <!-- Size! -->
-      <select class="option-value" class="option-value" id="size">
-        <option>Large</option>
-        <option>Medium</option>
-        <option>Small</option>
-      </select>
+      <div class="radio form-check-inline">
+        <label for="radio">Choose a size!
+          <input type="radio" name="size" value="Small">
+          Small
+        </label>
+      </div>
+      <div class="radio form-check-inline">
+        <label>
+          <input type="radio" name="size" value="Medium">
+          Medium
+        </label>
+      </div>
+      <div class="radio form-check-inline">
+        <label>
+          <input type="radio" name="operator" value="Large">
+          Large
+        </label>
+      </div>
 
       <!-- Toppings! -->
       <div class="custom-control custom-checkbox">
         <input type="checkbox" class="custom-control-input" id="topping1">
-        <label class="custom-control-label" for="topping1">Olives</label>
+        <label class="custom-control-label" name="toppings" for="topping1">Olives</label>
       </div>
 
       <div class="custom-control custom-checkbox">
         <input type="checkbox" class="custom-control-input" id="topping2">
-        <label class="custom-control-label" for="topping2">Pepperoni</label>
+        <label class="custom-control-label" name="toppings" for="topping2">Pepperoni</label>
       </div>
       
       <!-- Submit Button -->
